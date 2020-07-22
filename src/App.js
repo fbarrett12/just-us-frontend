@@ -16,7 +16,6 @@ const App = () => {
     if(localStorage.token){
       dispatch(userActions.persistUser())
     }
-    dispatch(userActions.getLaundromats())
   }, [dispatch])
 
 
