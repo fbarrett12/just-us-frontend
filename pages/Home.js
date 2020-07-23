@@ -7,16 +7,15 @@ const Home = () => {
         
     console.log(currentUser)
     
-    const text = currentUser.token ? (
-        <h1> {currentUser.userInfo.name} is currently logged in </h1>
-    ) :
-    (
-        <MainContainer />
-    )
+    // const text = currentUser.token ? (
+    //     <h1> {currentUser.userInfo.name} is currently logged in </h1>
+    // ) :
+    // (
+    //     <MainContainer />
+    // )
 
     return (
         <div>
-            {text}
             <MainContainer />
         </div>
     )
