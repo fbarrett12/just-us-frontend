@@ -5,6 +5,6 @@ import NavigationBar from '../components/NavigationBar'
 
 export default function MainContainer() {
     return(
-        <NavigationBar />
+        console.log("hi")
     )
 }

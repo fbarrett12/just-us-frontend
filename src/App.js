@@ -4,7 +4,7 @@ import './App.css'
 import userActions from './redux/actions'
 //import MainContainer from './containers/MainContainer'
 import Routes from './Routes'
-import Nav from './components/Nav'
+import NavigationBar from './components/NavigationBar'
 //import Sidebar from './components/Sidebar'
 import { BrowserRouter as Router } from 'react-router-dom'
 
@@ -22,8 +22,8 @@ const App = () => {
   return (
     <Router >
       <div className="app">
-      <Nav />
-      <Routes />
+        <NavigationBar />
+          <Routes />
       </div>
     </Router>
   )
