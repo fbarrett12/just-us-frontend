@@ -11,7 +11,7 @@ const Home = () => {
         <h1> {currentUser.userInfo.name} is currently logged in </h1>
     ) :
     (
-        <h1> no one is logged in</h1>
+        <MainContainer />
     )
 
     return (
