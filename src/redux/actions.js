@@ -75,6 +75,7 @@ const setUserAction = userObj => ({
     fetch(PERSIST_URL, config)
       .then(r => r.json())
       .then(userInstance => {    
+        debugger
         dispatch(setUserAction(userInstance))
         localStorage.setItem('role', userInstance.role)
       })

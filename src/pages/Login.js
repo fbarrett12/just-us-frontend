@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import userActions from '../../redux/actions'
+import userActions from '../redux/actions'
 
 const Login = props => {
     // initialize dispatch 
@@ -10,7 +10,6 @@ const Login = props => {
     const [loginForm, setLoginForm] = useState({
         name: '',
         password: '',
-        role: "Customer"
     })
 
     // controlled form functions
@@ -25,7 +24,7 @@ const Login = props => {
     }
 
     // destructure keys from local state to use in the form 
-    const { name, password, role } = loginForm
+    const { name, password} = loginForm
 
     return (
         <form onSubmit={handleSubmit}>
@@ -46,31 +45,9 @@ const Login = props => {
                 value={password}
                 onChange={handleChange}
                 placeholder="Password"
-            /> <br/>
+            /> 
 
-            <input 
-            type="radio"
-            name="role"
-            value="Customer"
-            checked={role === "Customer" ? "checked" : "" }
-            onChange={handleChange}
-          /> Customer <br></br>
-
-          <input 
-            type="radio"
-            name="role"
-            value="Courier"
-            checked={role === "Courier" ? "checked" : "" }
-            onChange={handleChange}
-          /> Courier <br></br>
-
-          <input 
-            type="radio"
-            name="role"
-            value="Service Provider"
-            checked={role === "Service Provider" ? "checked" : "" }
-            onChange={handleChange}
-          /> Service Provider <br></br>
+            <br/>
           
             <input type="submit" />
 

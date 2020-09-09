@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
-import userActions from '../../redux/actions'
+import userActions from '../redux/actions'
 import { Nav, Navbar, Form, FormControl } from 'react-bootstrap';
 import styled from 'styled-components';
 
@@ -37,21 +37,18 @@ return(
     <>    
         <Styles>
             <Navbar expand="lg">
-                <Navbar.Brand href="/">JUST US</Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav"/>
-                    <Form className="form-center">
-                        <FormControl type="text" placeholder="Search" className="" />
-                    </Form>
-                <Navbar.Collapse id="basic-navbar-nav">
+                <Navbar.Brand href="/" className="form-center">
+                    JUST US
+                </Navbar.Brand>
+
                 <Nav className="ml-auto">
                     <Nav.Item>
-                        <Link to="/signup">Signup</Link>
+                        <Link to="/signup">Sign Up</Link>
                     </Nav.Item> 
                     <Nav.Item>
-                        <Nav.Link href="/about">About</Nav.Link>
+                        <Link to="/login">Log In</Link>
                     </Nav.Item>
                 </Nav>
-                </Navbar.Collapse>
             </Navbar>
         </Styles>
     </>  
